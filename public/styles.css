@@ -1,0 +1,222 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Inicio Header */
+header {
+    background-color: #333;
+    background: linear-gradient(180deg, rgba(51, 51, 51, 1) 0%, rgba(44, 44, 44, 1) 50%, rgba(0, 0, 0, 1) 100%);
+    display: flex;
+    height: 200px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+}
+
+.logoBox {
+    width: calc(20% - 32px);
+    margin: 16px;
+}
+
+.Logo {
+    height: 120px;
+    transition: transform 0.9s;
+}
+
+.Logo:hover {
+    transform: scale(1.1);
+    position: relative;
+    border-radius: 100%;
+}
+
+header form button {
+    height: 50px;
+}
+
+.titulo {
+    width: calc(60% - 32px);
+    font-size: 26px;
+    margin: 16px;
+    font-family: Lucida Handwriting;
+    text-align: center;
+
+}
+
+.pesquisa {
+    height: 20px;
+    width: 20%;
+    margin-top: 50px;
+}
+
+.pesquisa input {
+    height: 50px;
+}
+
+/* Fim Header */
+
+/* Inicio Main*/
+main {
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+}
+
+.banner{
+    margin: 5%;
+}
+.banner img{
+    width: 100%;
+    border-radius: 5%;
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: calc(33% - 32px);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #222;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(141, 140, 140, 0.7);
+    transition: transform 0.9s, box-shadow 0.3s;
+    margin: 16px;
+    margin-bottom: 50px;
+
+}
+
+.card img {
+    width: 100%;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px rgb(145, 145, 145);
+}
+
+/* Fim Main*/
+
+/* Inicio Footer*/
+footer {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(44, 44, 44, 1) 50%, rgba(51, 51, 51, 1) 100%);
+    position: absolute;
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+}
+
+.peEsquerdo{
+    text-align: center;
+}
+
+.logoPe {
+    width: 150px;
+    display: inline;
+    margin-top: 50px;
+}
+
+.botoesPe {
+    display: flex;
+    gap: 5px;
+    height: 130px;
+}
+
+.botoesPe a img {
+    width: 80px;
+    box-shadow: 0 0 5px 2px #999;
+    margin: 7px;
+    border-radius: 100%;
+}
+
+.botoesPe a img:hover {
+    transform: scale(1.2);
+}
+
+.fimRodaPe{
+    font-size: 20px;
+    font-family: Garamond;
+}
+
+/* Fim Footer*/
+
+/*Responsividade celular*/
+
+@media screen and (max-width:450px) {
+
+    header {
+        height: 120px;
+    }
+
+    .logoBox {
+        width: calc(30% - 5px);
+        margin: 5px;
+    }
+
+    .logo {
+        width: 70px;
+        height: auto;
+    }
+
+    .Logo:hover {
+        display: none;
+    }
+
+    .titulo {
+        width: calc(70% - 5px);
+        font-size: 16px;
+        margin: 5px;
+        margin-top: 16px;
+    }
+
+    .pesquisa {
+        display: none;
+    }
+
+    .card {
+        width: calc(100% - 32px);
+    }
+
+}
+
+/*Responsividade Tablet*/
+
+@media screen and (min-width:451px) and (max-width:1024px) {
+
+    header {
+        height: 130px;
+    }
+
+    .pesquisa {
+        display: none;
+    }
+
+    .card {
+        width: calc(50% - 32px);
+    }
+
+    .logo {
+        margin-left: 5px;
+    }
+
+    .logoBox {
+        width: calc(20% - 5px);
+        margin: 5px;
+    }
+
+    .titulo {
+        width: calc(100% - 32px);
+    }
+}
