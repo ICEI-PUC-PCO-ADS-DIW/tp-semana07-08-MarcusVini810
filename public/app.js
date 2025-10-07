@@ -1,4 +1,4 @@
-let cards = [
+let animes = [
     {
         "id": 1,
         "anime": "One Piece",
@@ -35,4 +35,40 @@ let cards = [
         "resumo": "Asta, sem magia, busca tornar-se Rei Mago; enfrenta desigualdade, demônios e rivalidades, mostrando perseverança, amizade e superação do impossível.",
         "imagem": "img/BlackClover.jpg",
     }
-]
+];
+
+function criarCards(lista, idContainer) {
+    
+    //cria o container dos cards
+    const container = document.getElementById(idContainer);
+    container.innerHTML = "";
+
+    lista.forEach(item => {
+        
+        //declaração dos elementos dos cards
+
+        const card = document.createElement("article");
+        card.classList.add("card");
+
+        const img = document.createElement("img");
+        img.src = item.imagem;
+        img.alt = item.anime;
+
+        const titulo = document.createElement("h3");
+        titulo.textContent = item.anime;
+
+        const resumo = document.createElement("p");
+        resumo.textContent = item.resumo;
+
+        //montagem dos cards
+        card.append(img, titulo, resumo);
+
+        //Carrega os cards
+        container.appendChild(card);
+
+    });
+}
+
+    document.addEventListener("DOMContentLoaded", () =>{
+        criarCards(animes, "container_animes");
+    });
